@@ -132,6 +132,16 @@ main {
   display: inline-block;
 }
 
+.collection-meta .meta-link {
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.collection-meta .meta-link:hover { border-bottom-color: var(--accent); }
+
 /* Grid */
 .shelf {
   display: grid;
@@ -328,6 +338,8 @@ main {
       <span><?= count($comics) ?> <?= count($comics) === 1 ? 'Volume' : 'Volumes' ?></span>
       <span class="dot"></span>
       <span>Curated by Jon</span>
+      <span class="dot"></span>
+      <a class="meta-link" href="https://www.jona.ca/2026/05/making-ai-comic-adaptations-of-famous.html" target="_blank" rel="noopener">Read the story behind it</a>
     </div>
   </header>
 
