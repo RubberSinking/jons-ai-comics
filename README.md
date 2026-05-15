@@ -1,5 +1,7 @@
 # Jon's AI Comics
 
+<img src="thumbnails/pride-and-prejudice.jpg" alt="Pride and Prejudice cover" width="320">
+
 A small private library of famous books, reimagined as comics.
 
 Each volume is a PDF — the original story compressed into ~30 pages of comic panels, with the spine of the tale preserved. Generated with AI, curated by Jon.
