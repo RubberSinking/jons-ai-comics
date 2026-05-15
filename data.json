@@ -1,0 +1,32 @@
+{
+  "comics": [
+    {
+      "title": "Pride and Prejudice",
+      "source": "Pride and Prejudice by Jane Austen",
+      "description": "Jane Austen's 1813 novel of manners, wit, and misjudged first impressions, in which Elizabeth Bennet and Mr. Darcy talk their way slowly into love.",
+      "pdf": "pdfs/pride-and-prejudice.pdf",
+      "thumbnail": "thumbnails/pride-and-prejudice.jpg"
+    },
+    {
+      "title": "The Lion, the Witch and the Wardrobe",
+      "source": "The Lion, the Witch and the Wardrobe by C.S. Lewis",
+      "description": "C.S. Lewis's 1950 fantasy in which four English children step through a wardrobe into the snow-bound land of Narnia, where a great lion named Aslan is set against the White Witch's endless winter.",
+      "pdf": "pdfs/the-lion-the-witch-and-the-wardrobe.pdf",
+      "thumbnail": "thumbnails/the-lion-the-witch-and-the-wardrobe.jpg"
+    },
+    {
+      "title": "Sense and Sensibility",
+      "source": "Sense and Sensibility by Jane Austen",
+      "description": "Jane Austen's 1811 debut, following the Dashwood sisters \u2014 practical Elinor and passionate Marianne \u2014 through grief, courtship, and the slow, uneven shaping of a true marriage of heart and mind.",
+      "pdf": "pdfs/sense-and-sensibility.pdf",
+      "thumbnail": "thumbnails/sense-and-sensibility.jpg"
+    },
+    {
+      "title": "Treasure Island",
+      "source": "Treasure Island by Robert Louis Stevenson",
+      "description": "Robert Louis Stevenson's 1883 adventure in which young Jim Hawkins sets sail in search of buried pirate gold and meets, in the charming and dangerous Long John Silver, the most memorable rogue in English literature.",
+      "pdf": "pdfs/treasure-island.pdf",
+      "thumbnail": "thumbnails/treasure-island.jpg"
+    }
+  ]
+}
