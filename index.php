@@ -151,8 +151,6 @@ main {
 
 /* Comic Card */
 .comic {
-  text-decoration: none;
-  color: inherit;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -161,6 +159,30 @@ main {
 }
 
 .comic:hover { transform: translateY(-4px); }
+
+.comic-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cast-link {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 14, 'wght' 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  align-self: flex-start;
+  padding: 0.15rem 0;
+  margin-top: -0.25rem;
+  transition: border-color 0.2s ease;
+}
+.cast-link:hover { border-bottom-color: var(--accent); }
 
 .comic-cover {
   aspect-ratio: 1 / 1.42;
@@ -175,7 +197,8 @@ main {
   transition: box-shadow 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.comic:hover .comic-cover {
+.comic:hover .comic-cover,
+.comic-link:hover .comic-cover {
   box-shadow:
     0 1px 1px rgba(26, 23, 21, 0.04),
     0 10px 24px rgba(26, 23, 21, 0.09),
@@ -190,7 +213,8 @@ main {
   transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.comic:hover .comic-cover img { transform: scale(1.025); }
+.comic:hover .comic-cover img,
+.comic-link:hover .comic-cover img { transform: scale(1.025); }
 
 .comic-cover .placeholder {
   position: absolute;
@@ -245,7 +269,7 @@ main {
   transition: color 0.25s ease;
 }
 
-.comic:hover .comic-title { color: var(--accent); }
+.comic-link:hover .comic-title { color: var(--accent); }
 
 .comic-desc {
   font-family: 'EB Garamond', serif;
@@ -357,22 +381,31 @@ main {
         $pdf = $comic['pdf'] ?? '';
         $thumb = $comic['thumbnail'] ?? '';
         $num = str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT);
+        // Derive slug from pdf path (pdfs/foo.pdf -> foo) for cast image lookup
+        $slug = $pdf ? pathinfo($pdf, PATHINFO_FILENAME) : '';
+        $castPath = $slug ? "cast/{$slug}.jpg" : '';
+        $hasCast = $slug && file_exists(__DIR__ . '/' . $castPath);
       ?>
-        <a class="comic" href="<?= htmlspecialchars($pdf) ?>" target="_blank" rel="noopener" style="animation-delay: <?= 0.08 * $i ?>s;">
-          <div class="comic-cover">
-            <?php if ($thumb && file_exists(__DIR__ . '/' . $thumb)): ?>
-              <img src="<?= htmlspecialchars($thumb) ?>" alt="<?= htmlspecialchars($title) ?> cover">
-            <?php else: ?>
-              <span class="placeholder">№<?= $num ?></span>
+        <div class="comic" style="animation-delay: <?= 0.08 * $i ?>s;">
+          <a class="comic-link" href="<?= htmlspecialchars($pdf) ?>" target="_blank" rel="noopener">
+            <div class="comic-cover">
+              <?php if ($thumb && file_exists(__DIR__ . '/' . $thumb)): ?>
+                <img src="<?= htmlspecialchars($thumb) ?>" alt="<?= htmlspecialchars($title) ?> cover">
+              <?php else: ?>
+                <span class="placeholder">№<?= $num ?></span>
+              <?php endif; ?>
+            </div>
+            <div class="comic-number">№ <?= $num ?></div>
+            <div class="comic-title"><?= htmlspecialchars($title) ?></div>
+            <?php if ($source): ?>
+              <div class="comic-source">After <?= htmlspecialchars($source) ?></div>
             <?php endif; ?>
-          </div>
-          <div class="comic-number">№ <?= $num ?></div>
-          <div class="comic-title"><?= htmlspecialchars($title) ?></div>
-          <?php if ($source): ?>
-            <div class="comic-source">After <?= htmlspecialchars($source) ?></div>
+            <div class="comic-desc"><?= htmlspecialchars($description) ?></div>
+          </a>
+          <?php if ($hasCast): ?>
+            <a class="cast-link" href="<?= htmlspecialchars($castPath) ?>" target="_blank" rel="noopener">The Cast ↗</a>
           <?php endif; ?>
-          <div class="comic-desc"><?= htmlspecialchars($description) ?></div>
-        </a>
+        </div>
       <?php endforeach; ?>
     </section>
   <?php endif; ?>
