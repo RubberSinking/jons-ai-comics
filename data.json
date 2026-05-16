@@ -34,6 +34,13 @@
       "description": "Jane Austen's posthumously published 1817 satire of Gothic novels, in which young Catherine Morland's imagination runs wild at an old English abbey \u2014 until life teaches her that real love is gentler, and stranger, than fiction.",
       "pdf": "pdfs/northanger-abbey.pdf",
       "thumbnail": "thumbnails/northanger-abbey.jpg"
+    },
+    {
+      "title": "Hamlet",
+      "source": "Hamlet by William Shakespeare",
+      "description": "Shakespeare's c. 1600 tragedy of a Danish prince summoned by his father's ghost to avenge a murder \u2014 a long, unsteady meditation on action, doubt, mortality, and the terrible weight of knowing.",
+      "pdf": "pdfs/hamlet.pdf",
+      "thumbnail": "thumbnails/hamlet.jpg"
     }
   ]
 }
