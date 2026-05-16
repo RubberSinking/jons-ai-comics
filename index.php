@@ -350,7 +350,7 @@ main {
     </div>
   <?php else: ?>
     <section class="shelf">
-      <?php foreach ($comics as $i => $comic):
+      <?php $total = count($comics); foreach (array_reverse($comics, true) as $i => $comic):
         $title = $comic['title'] ?? 'Untitled';
         $description = $comic['description'] ?? '';
         $source = $comic['source'] ?? '';
