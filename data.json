@@ -27,6 +27,13 @@
       "description": "Robert Louis Stevenson's 1883 adventure in which young Jim Hawkins sets sail in search of buried pirate gold and meets, in the charming and dangerous Long John Silver, the most memorable rogue in English literature.",
       "pdf": "pdfs/treasure-island.pdf",
       "thumbnail": "thumbnails/treasure-island.jpg"
+    },
+    {
+      "title": "Northanger Abbey",
+      "source": "Northanger Abbey by Jane Austen",
+      "description": "Jane Austen's posthumously published 1817 satire of Gothic novels, in which young Catherine Morland's imagination runs wild at an old English abbey \u2014 until life teaches her that real love is gentler, and stranger, than fiction.",
+      "pdf": "pdfs/northanger-abbey.pdf",
+      "thumbnail": "thumbnails/northanger-abbey.jpg"
     }
   ]
 }
