@@ -41,6 +41,13 @@
       "description": "Shakespeare's c. 1600 tragedy of a Danish prince summoned by his father's ghost to avenge a murder \u2014 a long, unsteady meditation on action, doubt, mortality, and the terrible weight of knowing.",
       "pdf": "pdfs/hamlet.pdf",
       "thumbnail": "thumbnails/hamlet.jpg"
+    },
+    {
+      "title": "Jane Eyre",
+      "source": "Jane Eyre by Charlotte Bront\u00eb",
+      "description": "Charlotte Bront\u00eb's 1847 Gothic romance of conscience and self-respect, following orphaned Jane from hardship and loneliness toward love, moral courage, and a home of her own.",
+      "pdf": "pdfs/jane-eyre.pdf",
+      "thumbnail": "thumbnails/jane-eyre.jpg"
     }
   ]
 }
