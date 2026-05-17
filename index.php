@@ -289,6 +289,16 @@ main {
   margin-top: 0.25rem;
 }
 
+.comic-note {
+  font-family: 'Fraunces', serif;
+  font-variation-settings: 'opsz' 14, 'wght' 500;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: -0.25rem;
+}
+
 /* Empty state */
 .empty {
   border: 1px dashed var(--line);
@@ -380,6 +390,7 @@ main {
         $source = $comic['source'] ?? '';
         $pdf = $comic['pdf'] ?? '';
         $thumb = $comic['thumbnail'] ?? '';
+        $canadaOnlyPublicDomain = !empty($comic['canada_only_public_domain']);
         $num = str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT);
         // Derive slug from pdf path (pdfs/foo.pdf -> foo) for cast image lookup
         $slug = $pdf ? pathinfo($pdf, PATHINFO_FILENAME) : '';
@@ -399,6 +410,9 @@ main {
             <div class="comic-title"><?= htmlspecialchars($title) ?></div>
             <?php if ($source): ?>
               <div class="comic-source">After <?= htmlspecialchars($source) ?></div>
+            <?php endif; ?>
+            <?php if ($canadaOnlyPublicDomain): ?>
+              <div class="comic-note">🇨🇦 Public domain in Canada only</div>
             <?php endif; ?>
             <div class="comic-desc"><?= htmlspecialchars($description) ?></div>
           </a>

@@ -12,7 +12,8 @@
       "source": "The Lion, the Witch and the Wardrobe by C.S. Lewis",
       "description": "C.S. Lewis's 1950 fantasy in which four English children step through a wardrobe into the snow-bound land of Narnia, where a great lion named Aslan is set against the White Witch's endless winter.",
       "pdf": "pdfs/the-lion-the-witch-and-the-wardrobe.pdf",
-      "thumbnail": "thumbnails/the-lion-the-witch-and-the-wardrobe.jpg"
+      "thumbnail": "thumbnails/the-lion-the-witch-and-the-wardrobe.jpg",
+      "canada_only_public_domain": true
     },
     {
       "title": "Sense and Sensibility",
